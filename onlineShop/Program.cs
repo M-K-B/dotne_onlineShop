@@ -1,9 +1,20 @@
+using onlineShop.Models;
 var builder = WebApplication.CreateBuilder(args);
 
+DotNetEnv.Env.Load();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var url = AppConfig.url;
+var key = AppConfig.key;
+builder.Services.AddSingleton(provider => new Supabase.Client(url, key));
+
 var app = builder.Build();
+
+
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
