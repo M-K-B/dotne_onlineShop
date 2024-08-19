@@ -9,7 +9,5 @@ public class AppConfig
     public static string url = Environment.GetEnvironmentVariable("URL");
     public static string key = Environment.GetEnvironmentVariable("KEY");
 
-    
-    
-    
+   
 }

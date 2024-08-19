@@ -11,16 +11,11 @@ public class DataService : IDataService
         _supabaseClient = supabaseClient;
     }
 
-    public async Task Logout()
+    
+
+    public Task newOrder()
     {
-        try
-        {
-            await _supabaseClient.Auth.SignOut();
-        }
-        catch (Exception e)
-        {
-            
-        }
+        throw new NotImplementedException();
     }
 }
 

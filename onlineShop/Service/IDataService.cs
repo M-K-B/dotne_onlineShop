@@ -4,5 +4,5 @@ namespace onlineShop.Service;
 
 public interface IDataService
 {
-    Task Logout();
+    Task newOrder();
 }
